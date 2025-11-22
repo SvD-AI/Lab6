@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
+        .container { background: white; padding: 20px; border-radius: 8px; max-width: 400px; margin: 0 auto; }
+        h1 { color: #d35400; }
+        input, select, button { width: 100%; margin-bottom: 10px; padding: 10px; box-sizing: border-box; }
+        button { background-color: #d35400; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #e67e22; }
+        #message { color: green; display: none; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">🍕 Best Pizza</h1>
+        <form id="orderForm">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" placeholder="Введіть ім'я" required>
+            
+            <label for="pizza">Оберіть піцу:</label>
+            <select id="pizza">
+                <option value="margherita">Маргарита</option>
+                <option value="pepperoni">Пепероні</option>
+                <option value="hawaiian">Гавайська</option>
+            </select>
+
+            <button type="submit" id="orderBtn">Замовити</button>
+        </form>
+        <p id="message">Дякуємо! Замовлення прийнято.</p>
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            if(name) {
+                document.getElementById('message').style.display = 'block';
+                document.getElementById('orderForm').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
