@@ -1,6 +1,5 @@
 # --- Dependencies (Залежності) ---
 node_modules/
-/package-lock.json 
 
 # --- Logs (Логи) ---
 npm-debug.log*
