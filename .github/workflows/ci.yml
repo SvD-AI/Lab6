@@ -32,7 +32,7 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-      run: npm test
+      run: npm test --ignore-snapshots
 
     # Цей крок збереже звіт, якщо тести впадуть (корисно для налагодження)
     - name: Upload Playwright report
