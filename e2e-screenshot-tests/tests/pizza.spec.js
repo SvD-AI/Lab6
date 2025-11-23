@@ -12,8 +12,8 @@ test.describe('Pizza Shop Tests', () => {
     // --- E2E ТЕСТИ (3-5 штук) ---
 
     test('TC-01: Перевірка заголовка сторінки', async ({ page }) => {
-        await expect(page).toHaveTitle(/Pizza Order/);
-        await expect(page.locator('h1')).toContainText('Best Pizza');
+        // Було 'Pizza Order', міняємо на 'Burger King' щоб тест впав
+        await expect(page).toHaveTitle(/Burger King/); 
     });
 
     test('TC-02: Успішне замовлення піци', async ({ page }) => {
